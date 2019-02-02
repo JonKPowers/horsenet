@@ -1,8 +1,19 @@
 from selenium import webdriver
+import unittest
 
-browser = webdriver.Firefox()
-browser.get('http://localhost:8000')
+class PageSetupTest(unittest.TestCase):
 
-assert 'Django' in browser.title
+    def setUp(self):
+        self.browser = webdriver.Firefox()
 
-browser.close()
+    def tearDown(self):
+        self.browser.quit()
+
+    def testPageSetup(self):
+        # Title should include HorseNet
+        self.assertIn('HorseNet', self.browser.title)
+
+        self.fail('Finish the tests!')
+
+if __name__ == '__main__':
+    unittest.main()
