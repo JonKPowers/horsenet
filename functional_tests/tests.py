@@ -18,6 +18,10 @@ class PageSetupTest(unittest.TestCase):
 
         # Should have links at the top for:
 
+        # Home
+        menu_link_home = self.browser.find_element_by_id('menu_link_home')
+        self.assertIn('Home', menu_link_home.text)
+
         # Horses
         menu_link_horses = self.browser.find_element_by_id('menu_link_horses')
         self.assertIn('Horses', menu_link_horses.text) 
@@ -32,7 +36,7 @@ class PageSetupTest(unittest.TestCase):
 
         # DeepNet
         menu_link_deepnet = self.browser.find_element_by_id('menu_link_deepnet')
-        self.assertIn('DeepNet', menu_link_tracks.text)
+        self.assertIn('DeepNet', menu_link_deepnet.text)
 
         # [Reserved]
         menu_link_reserved = self.browser.find_element_by_id('menu_link_reserved')
