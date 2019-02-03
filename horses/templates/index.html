@@ -1,30 +1,5 @@
-<html>
-    <head>
-        <title>HorseNet v.01</title>
-    </head>
-    <body>
-        <nav>
-            <div>
-                <ul>
-                    <li id="menu_item_home">
-                        <a id="menu_link_home" href="index.html">Home</a>
-                    <li id="menu_item_horses">
-                        <a id="menu_link_horses" href="horses.html">Horses</a>
-                    </li>
-                    <li id="menu_item_races">
-                        <a id="menu_link_races" href="races.html">Races</a>
-                    </li>
-                    <li id="menu_item_tracks">
-                        <a id="menu_link_tracks" href="tracks.html">Tracks</a>
-                    </li>
-                    <li id="menu_item_deepnet">
-                        <a id="menu_link_deepnet" href="deepnet.html">DeepNet</a>
-                    </li>
-                    <li id="menu_item_reserved">
-                        [Reserved]
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </body>
-<html>
+{% extends 'base.html' %}
+
+{% block header_text %}--Home{% endblock %}
+
+{% block main_body %}Test{% endblock %}
